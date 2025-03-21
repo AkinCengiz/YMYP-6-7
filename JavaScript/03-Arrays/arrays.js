@@ -108,6 +108,8 @@ console.log(newArray.sort((small,big) => {
     return big - small;
 }))
 
+console.log(newArray.length);
+
 //DEĞER DÖNEN VE DÖNMEYEN METOT KAVRAMI
 // const getNumber = () => {
 //     return 5;
