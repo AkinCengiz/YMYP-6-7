@@ -25,6 +25,7 @@ person1.getLastname();
 const fullname = person1.getFullname();
 console.log("FullName : ",fullname);
 person1.toString();
+person1.getLastname();
 
 class Employee extends Person{
     constructor(firstname,lastname,salary){
