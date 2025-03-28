@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #F1F1F1;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /* border: 1px solid silver; */
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+
+#menu{
+    padding-top: 16px;
+    padding-left: 16px;
+    width: 20%;
+    /* border: 1px solid silver; */
+    background-color: #fff;
+}
+#content{
+    padding-top: 16px;
+    padding-left: 16px;
+    width: 80%;
+    /* border: 1px solid silver; */
+    background-color: #F1F1F1;
+}
+/* FLEX MODEL */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+#profile-image{
+    width: 50%;
+    height: auto;
+
+}
+#menu-list{
+    position: sticky;
+    top:16px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.menu-list-item{
+    padding: 8px 0px;
+    font-size: 1.2rem;
+}
+.menu-list-item i{
+    margin-right: 16px;
+}
+.menu-list-item a{
+    text-decoration: none;
+    color: black;
+}
+#social-accounts{
+    display: flex;
+    flex-direction: row;
+}
+#social-accounts li{
+    padding: 5px;
+}
+#menu-header{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+#profile-image{
+    margin-bottom: 16px;
+}
+#menu-title{
+    margin: 15px 0;
+}
+
+#header h1 {
+    margin-bottom: 10px;
+  }
+  #nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #nav span {
+    padding: 5px;
+    margin: 0 1px;
+  }
+  #nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list-item a {
+    padding: 5px;
+    margin: 0 1px;
+    background-color: #fff;
+  }
+  .nav-list-item i {
+    margin-right: 5px;
+  }
+  #header hr {
+    font-weight: bolder;
+  }
+  #portfolio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+  }
+  .card-box{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 5px;
+  }
+  .card{
+    width: 100%;
+    background-color: #fff;
+  }
+  .card-img-top{
+    width: 100%;
+  }
+  .card-body{
+    padding: 5px;
+  }
+  #image-list{
+    display: flex;
+    flex-direction: row;
+  }
+  .image-box{
+    width: 50%;
+    padding: 5px;
+    padding-right: 10px;
+  }
+  .image-box img{
+    width: 100%;
+  }
+  #about{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px;
+    padding-right: 10px;
+  }
+  #about h4, #about p{
+    margin: 5px 0;
+  }
+  .upper-skill{
+    width: 100%;
+    background-color: #9E9E9E;
+  }
+  .lower-skill{
+    background-color: #616161;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  #download{
+    padding: 5px;
+    background-color: #616161;
+    color: white;
+    border: 1px solid #616161;
+    margin: 10px 0;
+  }
+  #download:hover{
+    background-color: #9E9E9E;
+  }
+  #products{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .product{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid silver;
+  }
+  .product-title{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #616161;
+    color: white;
+    width: 100%;
+  }
+  .product-features{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .product-features li{
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid silver;
+    color: silver;
+    text-align: center;
+  }
+  .price{
+    text-align: center;
+    padding: 10px;
+  }
+  .price p:last-child{
+    color: silver;
+  }
+  .price-button{
+    width: 100%;
+    background-color: #F1F1F1;
+    text-align: center;
+  }
+  .price-button button{
+    padding: 10px;
+    background-color: #009688;
+    margin: 10px 0;
+    border: 1px solid #009688;
+    color: white;
+  }
+  .pro-color{
+    background-color: #009688 !important;
+    color: white !important;
+  }
+  #contact{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    
+  }
+  #contact-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contact-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 20px;
+    background-color: #616161;
+    color: white;
+  }
+  .contact-item i{
+    margin-bottom: 5px;
+  }
+  #contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px;
+  }
+  #contact-form label, #contact-form input{
+    margin-bottom: 5px;
+  }
+  #contact-form input{
+    width: 100%;
+  }
+  #contact-form button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+
+  }
+  @media screen and (max-width : 992px) {
+    .container{
+      flex-direction: column;
+    }
+    #menu{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    #menu-header{
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #profile-image{
+      order: 3;
+      width: 60px;
+      height: auto;
+      margin-right: 16px;
+      border-radius: 50%;
+    }
+    #menu-list{
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #social-accounts{
+      width: 50%;
+      align-items: center;
+      justify-content: end;
+    }
+    .menu-list-item i{
+      margin-right: 5px;
+    }
+    #content{
+      width: 100%;
+    }
+
+  }
+  @media screen and (max-width : 768px) {
+    html{
+      font-size: 10px;
+    }
+    .card-box{
+      width: 50%;
+      padding: 5px;
+    }
+  }
+  @media screen and (max-width : 576px) {
+    .card-box{
+      width: 100%;
+      padding: 5px;
+    }
+    #image-list{
+      flex-direction: column;
+    }
+    .image-box{
+      width: 100%;
+    }
+    #download{
+      
+      width: 100%;
+    }
+    #products{
+      flex-direction: column;
+    }
+    .product{
+      width: 100%;
+      font-size: 2rem;
+    }
+    #contact-box{
+      flex-direction: column;
+    }
+    .contact-item{
+      width: 100%;
+      font-size: 2rem;
+    }
+    #contact-form{
+      font-size: 2rem;
+
+    }
+    .form-input{
+      padding: 5px;
+      font-size: 2.5rem;
+    }
+  }
+
+  .text-red{
+    color: red;
+  }
+
+  .f-xl{
+    font-size: 3rem;
+  }
+  .text-ligth{
+    color: white;
+  }
