@@ -8,3 +8,4 @@ document.addEventListener("keyup",getKeyEvents);
 function getKeyEvents(e) {
     console.log(e.which,e.key,e.type);
 }
+
