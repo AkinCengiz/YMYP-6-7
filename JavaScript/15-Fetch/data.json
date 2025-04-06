@@ -1,0 +1,8 @@
+{
+    "user" : {
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "email" : "akincengiz@msn.com"
+    },
+    "programLanguages" : ["HTML","CSS","JavaScript","React","CSharp"]
+}
