@@ -1,0 +1,7 @@
+.card{
+    background-color: green;
+}
+.card .list-group-item{
+    background-color: black;
+    color: white;
+}
