@@ -13,7 +13,7 @@ function Card() {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <CardImage imageUrl={imageUrl} />
-      <CardBody x={title} description={description} />
+      <CardBody x={title} description={description} setImageUrl={setImageUrl} setTitle={setTitle} setDescription={setDescription} />
     </div>
   );
 }
