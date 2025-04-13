@@ -1,10 +1,11 @@
 import React from 'react'
+import TaskCard from './TaskCard'
 
 function TaskList({tasks}) {
   return (
-    <div className='task-list'>
+    <div id='task-list'>
         {
-            tasks.map((task) => (<div key={task.id}>{task.title}</div>))
+            tasks.map((task) => (<TaskCard key={task.id} task={task} />))
         }
     </div>
   )
