@@ -1,0 +1,18 @@
+{
+    "myinfo" : {
+        "firstname" : "Akın",
+        "lastname" : "Cengiz",
+        "email" : "akincengiz@msn.com"
+    },
+    "products" : [
+        {"id" : 1, "name" : "Bilgisayar","price" : 15000},
+        {"id" : 2, "name" : "Cep Telefonu","price" : 12000},
+        {"id" : 1, "name" : "Televizyon","price" : 10000},
+        {"id" : 1, "name" : "Klavye","price" : 500}
+    ],
+    "address":{
+        "city" : "İstanbul",
+        "town" : "Eyüp",
+        "district" : "Kemerburgaz"
+    }
+}

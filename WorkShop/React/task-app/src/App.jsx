@@ -19,13 +19,34 @@ function App() {
     }]);
     console.log(tasks);
   }
+  //numbers = [1,2,3,4,5];
+  
+  //newNumbers = numbers.filter((number) => number !== 3)
+  //[1,2,4,5]
+
+  //tasks = [{id:1,title:Html,description:"sdfsdsdsa",important:true}] 
+  function deleteTask(id){
+    const deletedAfterTasks = tasks.filter((task) => task.id !== id);
+    setTasks(deletedAfterTasks);
+  }
+
+  const updateTask = (id,title,description,important) => {
+      const updatedTasks = tasks.map((task) => {
+        if(task.id === id){
+          return {id,title,description,important}
+        }
+        return task;
+      })
+      setTasks(updatedTasks);
+  }
+
   return (
     <>
     <div id="app">
       <div id="task-form-container">
         <TaskForm create={createTask}/>
       </div>
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask}/>
     </div>
     </>
   )

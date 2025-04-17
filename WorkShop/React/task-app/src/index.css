@@ -11,3 +11,6 @@ input, textarea{
   width: 80%;
   margin: 0 auto;
 }
+body{
+  background-color: red;
+}
