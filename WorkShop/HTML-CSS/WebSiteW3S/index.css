@@ -1,0 +1,81 @@
+/*koyu gri #333333 */
+/*açık gri #666666 */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing : border-box;
+}
+.container-fluid{
+    width: 100%;
+}
+
+/********** HEADER STYLE START ***********/
+#header{
+    display: flex;
+}
+#header-logo{
+    width: 5%;
+    background-color: #009688;
+    padding: 8px;
+    color: white;
+    font-size: 0.8rem;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    background-color: #000000;
+    color: white;
+}
+#nav-menu{
+    display: flex;
+}
+.menu-item{
+    padding: 8px 10px;
+}
+.menu-item:hover{
+    background-color: white;
+    color: #000;
+}
+.menu-item:hover a{
+    background-color: white;
+    color: #000;
+}
+.menu-item a{
+    color: white;
+}
+#search-box{
+    padding: 8px 10px;
+}
+#search-box:hover{
+    background-color: #009688;
+}
+/************* HEADER STYLE - END *****************/
+
+/************* PAGE IMAGE STYLE - START *****************/
+#page-image{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    max-height: 600px;            
+    background-image: url("images/sailboat.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+#page-title{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+}
+#page-title:hover{
+    background-color: #009688;
+}
+/************* PAGE IMAGE STYLE - END *****************/

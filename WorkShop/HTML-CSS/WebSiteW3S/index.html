@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        #team{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        #team-title{
+            padding: 10px;
+        }
+        #team-text{
+            margin: 10px auto;
+        }
+        #team-list{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .team-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .card-image{
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .card-title{
+            margin: 10px auto;
+        }
+        .card-text{
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="header">
+            <div id="header-logo"><i class="fa-solid fa-house"></i> Home</div>
+            <div id="navbar">
+                <ul id="nav-menu">
+                    <li class="menu-item"><a href="#">Team</a></li>
+                    <li class="menu-item"><a href="#">Work</a></li>
+                    <li class="menu-item"><a href="#">Price</a></li>
+                    <li class="menu-item"><a href="#">Contact</a></li>
+                </ul>
+                <div id="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div id="page-image">
+            <h3 id="page-title">YMYP 6&7</h3>
+        </div>
+        <div id="team">
+            <h3 id="team-title">OUR TEAM</h3>
+            <p id="team-text">Meet the team - our office rats:</p>
+            <div id="team-list">
+                <div class="team-card">
+                    <img class="card-image" src="./images/avatar.jpg" alt="avatar">
+                    <h4 class="card-title">Johnny Walker</h4>
+                    <p class="card-text">Web Designer</p>
+                </div>
+                <div class="team-card">
+                    <img class="card-image" src="./images/avatar.jpg" alt="avatar">
+                    <h4 class="card-title">Johnny Walker</h4>
+                    <p class="card-text">Web Designer</p>
+                </div>
+                <div class="team-card">
+                    <img class="card-image" src="./images/avatar.jpg" alt="avatar">
+                    <h4 class="card-title">Johnny Walker</h4>
+                    <p class="card-text">Web Designer</p>
+                </div>
+                <div class="team-card">
+                    <img class="card-image" src="./images/avatar.jpg" alt="avatar">
+                    <h4 class="card-title">Johnny Walker</h4>
+                    <p class="card-text">Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

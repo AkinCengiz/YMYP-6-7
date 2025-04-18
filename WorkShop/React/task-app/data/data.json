@@ -1,3 +1,28 @@
 {
-    "tasks":[]
+  "tasks": [
+    {
+      "title": "HTML",
+      "description": "Html script dili",
+      "important": true,
+      "id": "6a83"
+    },
+    {
+      "title": "CSS",
+      "description": "Html etiketlerini biçimlendirme.",
+      "important": true,
+      "id": "7366"
+    },
+    {
+      "title": "JavaScript",
+      "description": "Sayfa dinamikleştirme",
+      "important": true,
+      "id": "1a77"
+    },
+    {
+      "id": "5250",
+      "title": "React",
+      "description": "Jsx ile html javascript kodlarını iç içe kullanabilme",
+      "important": true
+    }
+  ]
 }
