@@ -161,7 +161,7 @@
 }
 /************* TEAM SECTION STYLE - END *****************/
 
-/************* TEAM PRISING STYLE - START *****************/
+/************* PRISING STYLE - START *****************/
 #pricing{
     width: 100%;
     display: flex;
@@ -188,6 +188,10 @@
     align-items: center;
     justify-content: center;
     border: 1px solid silver;
+}
+.pricing-card:hover{
+    /* box-shadow: 5px 5px 25px #888, -5px -5px 25px #888, -5px 5px 25px #888,5px -5px 25px #888 */
+    box-shadow: 5px 5px 25px #888;
 }
 .pricing-title{
     background-color : #000;
@@ -227,4 +231,124 @@
     color: white;
     border: none;
 }
-/************* TEAM PRISING STYLE - END *****************/
+/************* PRISING STYLE - END *****************/
+
+/************* CONTACT STYLE - START *****************/
+#contact{
+    /* 009688 */
+    width: 100%;
+    padding: 64px 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F0F0F0;
+}
+#contact-info{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#contact-title{
+    margin: 16px 0;
+    border-bottom: 5px solid #009688;
+}
+#contact-subtitle{
+    margin: 10px 0;
+}
+#contact-text{
+    margin: 15px 0;
+}
+.contact-list{
+    width: 100%;
+}
+.contact-list-item{
+    padding: 15px 0;
+}
+.fa-solid{
+    background-color: #fff;
+    color: #009688;
+}
+#contact-form{
+    width: 60%;
+    padding: 16px;
+    background-color: #fff;
+}
+.form-group{
+    width: 100%;
+    border-bottom: 1px solid silver;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-label{
+    width: 100%;
+    padding: 8px 0;
+}
+.form-control{
+    width: 100%;
+    padding: 8px;
+    border: none;
+}
+.control-group{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 8px 0;
+}
+.control-label{
+    display: inline;
+}
+#like{
+    width: 25px;
+    height: 25px;
+}
+.button{
+    padding: 8px;
+    background-color: #009688;
+    color: #fff;
+    border : none;
+}
+/************* CONTACT STYLE - END *****************/
+
+/************* MAP STYLE - START *****************/
+#map{
+    width: 100%;
+}
+/************* MAP STYLE - END *****************/
+
+
+/************* FOOTER STYLE - START *****************/
+#footer{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 16px;
+}
+#footer-title{
+    margin: 10px 0;
+}
+#social-accounts{
+    padding: 16px;
+}
+#social-list{
+    display: flex;
+    justify-content: center;
+}
+.social-list-item{
+    padding: 8px 0;
+}
+.fa-brands{
+    background-color: #009688;
+    color: white;
+    padding: 8px 8px;
+    margin: 0 3px;
+}
+#footer-text{
+    margin: 10px 0;
+}
+/************* FOOTER STYLE - END *****************/
