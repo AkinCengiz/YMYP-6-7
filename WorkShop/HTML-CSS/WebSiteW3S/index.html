@@ -7,70 +7,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="./index.css">
     <style>
-        #pricing{
+        #contact{
+            /* 009688 */
             width: 100%;
+            padding: 64px 16px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #F0F0F0;
+        }
+        #contact-info{
+            width: 40%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 64px 8px;
+            align-items: start;
         }
-        #pricing-title{
+        #contact-title{
+            margin: 16px 0;
+            border-bottom: 5px solid #009688;
+        }
+        #contact-subtitle{
             margin: 10px 0;
         }
-        #pricing-text{
+        #contact-text{
             margin: 15px 0;
         }
-        #pricing-products{
+        .contact-list{
+            width: 100%;
+        }
+        .contact-list-item{
+            padding: 15px 0;
+        }
+        .fa-solid{
+            background-color: #fff;
+            color: #009688;
+        }
+        #contact-form{
+            width: 60%;
+            padding: 16px;
+            background-color: #fff;
+        }
+        .form-group{
+            width: 100%;
+            border-bottom: 1px solid silver;
+            padding: 8px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-label{
+            width: 100%;
+            padding: 8px 0;
+        }
+        .form-control{
+            width: 100%;
+            padding: 8px;
+            border: none;
+        }
+        .control-group{
             display: flex;
             justify-content: space-between;
             width: 100%;
-            padding: 10px;
-        }
-        .pricing-card{
-            width: 32%;
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border: 1px solid silver;
+            padding: 8px 0;
         }
-        .pricing-title{
-            background-color : #000;
-            color: #fff;
-            width: 100%;
-            padding: 8px 16px;
+        .control-label{
+            display: inline;
         }
-        .pricing-title .card-title{
-            margin: 24px 0;
+        #like{
+            width: 25px;
+            height: 25px;
         }
-        .card-body{
-            width: 100%;
-        }
-        .pricing-list{
-            text-align: center;
-        }
-        .pricing-list-item{
-            padding: 16px;
-            border-bottom: 1px solid silver;
-        }
-        .card-total{
-            text-align: center;
-        }
-        .total{
-            padding: 10px;
-        }
-        .card-footer{
-            text-align: center;
-            padding: 15px;
-            border-top: 1px solid silver;
-            margin-top: 15px;
-            background-color: #f0f0f0;
-        }
-        .pricing-button{
-            padding: 12px 24px;
+        .button{
+            padding: 8px;
             background-color: #009688;
-            color: white;
-            border: none;
+            color: #fff;
+            border : none;
         }
     </style>
 </head>
@@ -231,6 +241,38 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="contact">
+            <div id="contact-info">
+                <h3 id="contact-title">Contact US</h3>
+                <h4 id="contact-subtitle">Address</h4>
+                <p id="contact-text">Swing by for a cup of coffee, or whatever.</p>
+                <ul class="contact-list">
+                    <li class="contact-list-item"><i class="fa-solid fa-location-pin"></i> İstanbul</li>
+                    <li class="contact-list-item"><i class="fa-solid fa-phone-volume"></i> 0123 456 78 90</li>
+                    <li class="contact-list-item"><i class="fa-solid fa-envelope"></i> info@ymyp.com</li>
+                </ul>
+            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <input type="text" class="form-control" id="message">
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="like">
+                        <input type="checkbox" checked name="like" id="like"> I Like it!
+                    </label>
+                    <button class="button" id="send">Send</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
