@@ -79,3 +79,83 @@
     background-color: #009688;
 }
 /************* PAGE IMAGE STYLE - END *****************/
+
+/************* TEAM SECTIN STYLE - START *****************/
+#team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#team-title{
+    padding: 10px;
+}
+#team-text{
+    margin: 10px auto;
+}
+#team-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+.team-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+}
+.card-image{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 70%;
+}
+.card-title{
+    margin: 10px auto;
+    text-align: center;
+}
+.card-text{
+    margin: 10px auto;
+}
+/************* TEAM SECTION STYLE - END *****************/
+
+
+
+/************* WORK SECTION STYLE - START *****************/
+#work{
+    width: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.work-card-container{
+    width: 25%;
+    padding: 64px 8px;
+}
+.work-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+}
+.work-title{
+    margin: 10px 0;
+    padding: 0 8px;
+}
+.work-text{
+    margin: 10px 0;
+    padding: 0 8px;
+}
+.work-list{
+    padding: 8px;
+}
+.work-list-item{
+    margin: 15px 0;
+}
+/************* TEAM SECTION STYLE - END *****************/

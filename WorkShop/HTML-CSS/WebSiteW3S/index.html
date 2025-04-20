@@ -7,42 +7,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="./index.css">
     <style>
-        #team{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-        }
-        #team-title{
-            padding: 10px;
-        }
-        #team-text{
-            margin: 10px auto;
-        }
-        #team-list{
+        #pricing{
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
-            padding: 10px 0;
+            padding: 64px 8px;
         }
-        .team-card{
+        #pricing-title{
+            margin: 10px 0;
+        }
+        #pricing-text{
+            margin: 15px 0;
+        }
+        #pricing-products{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+        }
+        .pricing-card{
+            width: 32%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            border: 1px solid silver;
+        }
+        .pricing-title{
+            background-color : #000;
+            color: #fff;
+            width: 100%;
+            padding: 8px 16px;
+        }
+        .pricing-title .card-title{
+            margin: 24px 0;
+        }
+        .card-body{
+            width: 100%;
+        }
+        .pricing-list{
+            text-align: center;
+        }
+        .pricing-list-item{
+            padding: 16px;
+            border-bottom: 1px solid silver;
+        }
+        .card-total{
+            text-align: center;
+        }
+        .total{
             padding: 10px;
-            margin: 10px;
         }
-        .card-image{
-            border-radius: 50%;
-            margin-bottom: 10px;
+        .card-footer{
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid silver;
+            margin-top: 15px;
+            background-color: #f0f0f0;
         }
-        .card-title{
-            margin: 10px auto;
-        }
-        .card-text{
-            margin: 10px auto;
+        .pricing-button{
+            padding: 12px 24px;
+            background-color: #009688;
+            color: white;
+            border: none;
         }
     </style>
 </head>
@@ -88,6 +116,119 @@
                     <img class="card-image" src="./images/avatar.jpg" alt="avatar">
                     <h4 class="card-title">Johnny Walker</h4>
                     <p class="card-text">Web Designer</p>
+                </div>
+            </div>
+        </div>
+        <div id="work">
+            <div class="work-card-container">
+                <div class="work-info">
+                    <h3 class="work-title">Our Work</h3>
+                    <p class="work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="work-card-container">
+                <div class="work-card">
+                    <img class="work-img" src="./images/mountains.jpg" alt="">
+                    <h3 class="work-title">Customer 1</h3>
+                    <p class="work-text">Trade</p>
+                    <ul class="work-list">
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work-card-container">
+                <div class="work-card">
+                    <img class="work-img" src="./images/snow.jpg" alt="">
+                    <h3 class="work-title">Customer 1</h3>
+                    <p class="work-text">Trade</p>
+                    <ul class="work-list">
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work-card-container">
+                <div class="work-card">
+                    <img class="work-img" src="./images/lights.jpg" alt="">
+                    <h3 class="work-title">Customer 1</h3>
+                    <p class="work-text">Trade</p>
+                    <ul class="work-list">
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                        <li class="work-list-item">Lorem, ipsum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="pricing">
+            <h3 id="pricing-title">PRICING</h3>
+            <p id="pricing-text">Choose a pricing plan that fits your needs.</p>
+            <div id="pricing-products">
+                <div class="pricing-card">
+                    <div class="pricing-title">
+                        <h3 class="card-title">BASIC</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-list">
+                            <li class="pricing-list-item"><strong>10GB</strong> Storage</li>
+                            <li class="pricing-list-item"><strong>10</strong>  Emails</li>
+                            <li class="pricing-list-item"><strong>10</strong> Domains</li>
+                            <li class="pricing-list-item"><strong>Endless</strong> Support</li>
+                        </ul>
+                        <div class="card-total">
+                            <p class="total">$10</p>
+                            <span>per month</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="pricing-button">Sing Up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">
+                        <h3 class="card-title">BASIC</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-list">
+                            <li class="pricing-list-item">10GB Storage</li>
+                            <li class="pricing-list-item">10 Emails</li>
+                            <li class="pricing-list-item">10 Domains</li>
+                            <li class="pricing-list-item">Endless Support</li>
+                        </ul>
+                        <div class="card-total">
+                            <p class="total">$10</p>
+                            <span>per month</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="pricing-button">Sing Up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">
+                        <h3 class="card-title">BASIC</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-list">
+                            <li class="pricing-list-item">10GB Storage</li>
+                            <li class="pricing-list-item">10 Emails</li>
+                            <li class="pricing-list-item">10 Domains</li>
+                            <li class="pricing-list-item">Endless Support</li>
+                        </ul>
+                        <div class="card-total">
+                            <p class="total">$10</p>
+                            <span>per month</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="pricing-button">Sing Up</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
