@@ -1,17 +1,7 @@
-.offcanvas{
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 1rem;
-    z-index: 105;
-}
-
 .content{
     width: 400px;
     height: 100vh;
 }
-
 .cart{
     width: 100%;
     align-items: center;
