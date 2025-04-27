@@ -7,13 +7,16 @@ const CartProvider = ({children}) => {
     const [cartList,setCartList] = useState([]);
     const [cartTotalPrice, setCartTotalPrice] = useState(0);
 
-    
+
     useEffect(() => {
         calculateTotal();
     },[cartList]);
 
 
 
+    const clearCartList = () => {
+        setCartList([]);
+    }
 
     const showCartHandle = () => {
         setCartIsShow(true);
@@ -38,6 +41,10 @@ const CartProvider = ({children}) => {
             return accumulator + (current.price * current.amount)
         },0)
         setCartTotalPrice(total);
+    }
+    const removeItemFromCart = (product) => {
+        const removeAfterCart = cartList.filter(item => item.id !== product.id);
+        setCartList(removeAfterCart)
     }
 
     /**
@@ -75,7 +82,9 @@ const CartProvider = ({children}) => {
         setCartIsShow,
         hideCartHandle,
         showCartHandle,
-        addToCart
+        addToCart,
+        clearCartList,
+        removeItemFromCart
     }
   return (
     <CartContext.Provider value={values}>

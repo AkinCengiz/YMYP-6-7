@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./ProductItem.css";
 import { CartContext } from "../../contexts/CartProvider";
+import Rating from "./Rating";
 
 const ProductItem = ({product}) => {
 
@@ -15,7 +16,7 @@ const ProductItem = ({product}) => {
       <h3 className="card-title">{product.name}</h3>
       <p className="card-desc">{product.description}</p>
       <div className="card-info">
-        <span>{product.rating}</span>
+        <Rating rate={product.rating}/>
         <span className="price">{product.price} ₺</span>
       </div>
       <button className="add-to-cart" onClick={() => addToCart(product)}>Add To Cart</button>

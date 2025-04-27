@@ -3,7 +3,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #6495ED;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -5,7 +5,7 @@ import { CartContext } from '../../contexts/CartProvider'
 import OffCanvas from '../General/OffCanvas.jsx'
 
 const Cart = () => {
-    const {hideCartHandle, cartTotalPrice} = useContext(CartContext)
+    const {hideCartHandle, cartTotalPrice,clearCartList} = useContext(CartContext)
   return (
     <OffCanvas hideCartHandle={hideCartHandle}>
         <div className="cart">
@@ -20,7 +20,7 @@ const Cart = () => {
                 </div>
                 <div className="action-buttons">
                     <button className='order-button'>Pay</button>
-                    <button className='cart-clear'>Clear</button>
+                    <button className='cart-clear' onClick={clearCartList}>Clear</button>
                 </div>
             </div>
     </OffCanvas>
