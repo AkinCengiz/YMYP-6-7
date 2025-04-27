@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProductItem.css";
+import { CartContext } from "../../contexts/CartProvider";
 
 const ProductItem = ({product}) => {
+
+  const {addToCart} = useContext(CartContext)
   return (
     <div className="card">
       <img
@@ -15,7 +18,7 @@ const ProductItem = ({product}) => {
         <span>{product.rating}</span>
         <span className="price">{product.price} ₺</span>
       </div>
-      <button className="add-to-cart">Add To Cart</button>
+      <button className="add-to-cart" onClick={() => addToCart(product)}>Add To Cart</button>
     </div>
   );
 };

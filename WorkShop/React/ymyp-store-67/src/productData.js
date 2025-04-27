@@ -14,7 +14,7 @@ const products = [
         description : "Masaüstü oyun bilgisayarı",
         price : 12500,
         stock : 9,
-        rating : 5,
+        rating : 4,
         image : "/images/products/desktop.png"
     },
     {
@@ -23,7 +23,7 @@ const products = [
         description : "IPhone 15 256 Gb",
         price : 15500,
         stock : 19,
-        rating : 5,
+        rating : 4,
         image : "/images/products/iphone.png"
     },
     {
@@ -32,7 +32,7 @@ const products = [
         description : "Samsung Note20 256 Gb",
         price : 17500,
         stock : 13,
-        rating : 5,
+        rating : 3,
         image : "/images/products/samsung.png"
     },
     {
@@ -41,7 +41,7 @@ const products = [
         description : "LG Ultra HD Smart Televizyon",
         price : 12500,
         stock : 7,
-        rating : 5,
+        rating : 2,
         image : "/images/products/lg-tv.png"
     }
 ];

@@ -7,7 +7,7 @@ const HeaderButton = () => {
   return (
     <button className="button" onClick={showCartHandle}>
       <span className="icon">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i className="fa-solid fa-cart-shopping"></i>
       </span>
       <span className="btn-text">Cart</span>
       <span className="badge">0</span>
