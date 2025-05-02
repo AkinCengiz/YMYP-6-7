@@ -16,9 +16,11 @@ function reducer(state,action){
     }
 }
 
+const counter = 0
+
 const CounterReducer = () => {
 
-    const [state,dispatch] = useReducer(reducer,0);
+    const [state,dispatch] = useReducer(reducer,counter);
 //   const [counter, setCounter] = useState(0);
 
 //   const decrement = () => {
