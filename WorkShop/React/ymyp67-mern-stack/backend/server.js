@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const cors = require("cors");
 
 const mainRoute = require("./routes");
 
 const PORT = 5000;
-const MONGO_URL = "mongodb+srv://akincengiz:Bjk1903+@akincengiz.khf0v.mongodb.net/Ymyp67MernStack"
+const MONGO_URL = "mongodb+srv://akincengiz:Bjk1903@akincengiz.khf0v.mongodb.net/Ymyp67MernStack"
 
 
 const connect = async () => {
@@ -17,6 +18,7 @@ const connect = async () => {
     }
 }
 app.use(express.json());
+app.use(cors());
 app.use("/api",mainRoute);
 
 
