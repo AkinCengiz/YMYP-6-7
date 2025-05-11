@@ -8,7 +8,7 @@ const CategoryList = () => {
 
     useEffect(() => {
         getCategories();
-    },[])
+    },[categoryData])
 
     const getCategories = async() => {
         try {
@@ -35,7 +35,7 @@ const CategoryList = () => {
                 body : JSON.stringify({_id:categoryId})
             });
             if(response.ok){
-                navigate("/admin/categories");
+                getCategories();
             }else{
                 console.log("Kategori silinirken hata oluştu...");
             }
