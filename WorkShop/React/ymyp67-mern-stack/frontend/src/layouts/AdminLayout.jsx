@@ -5,6 +5,7 @@ import {
   ShopOutlined,
   UserOutlined,
   DashboardOutlined,
+  FormOutlined,
   ContainerOutlined,
   DesktopOutlined,
   MailOutlined,
@@ -34,6 +35,10 @@ const AdminLayout = ({children}) => {
             { key : "4-1", label : "Kullanıcıları Listele"},
             { key : "4-2", label : "Kullanıcı Ekle"}
         ]},
+        { key :"5", icon : <FormOutlined />, label:"Yazar", children: [
+            { key : "5-1", label : "Yazarları Listele"},
+            { key : "5-2", label : "Yazar Ekle"}
+        ]}
     ]
 
   return (
@@ -51,7 +56,7 @@ const AdminLayout = ({children}) => {
             </Sider>
             <Layout>
                 <Header style={{color:"#fff"}}>YMYP Mern Stack App</Header>
-                <Content>{children}</Content>
+                <Content >{children}</Content>
                 <Footer style={{backgroundColor:"#001529", color:"#fff"}}>Tüm hakları saklıdır</Footer>
             </Layout>
         </Layout>
