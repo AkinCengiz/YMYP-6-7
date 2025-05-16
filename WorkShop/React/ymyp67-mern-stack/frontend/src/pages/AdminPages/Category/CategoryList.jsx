@@ -74,7 +74,12 @@ const CategoryList = () => {
   return (
     <div>
         <h2>Kategoriler</h2>
-        <Table columns={columns} dataSource={categoryData} rowKey={(record) => record._id}/>
+        <Table 
+        columns={columns} 
+        dataSource={categoryData} 
+        rowKey={(record) => record._id} 
+        pagination={{ pageSize: 10 }}
+        scroll={{ y: 600 }}/>
     </div>
   )
 }
