@@ -8,14 +8,14 @@ const CategoryList = () => {
 
     useEffect(() => {
         getCategories();
-    },[categoryData])
+    },[])
 
     const getCategories = async() => {
         try {
             const response = await fetch("http://localhost:5000/api/categories");
             if(response.ok){
                 const data = await response.json();
-                console.log(data)
+                //console.log(data)
                 setCategoryData(data);
             }else{
                 console.log("Kategori getirilirken hata oluştu...");

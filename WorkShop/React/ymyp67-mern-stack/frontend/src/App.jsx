@@ -4,7 +4,9 @@ import HomePage from './pages/HomePage'
 import Dashboard from './pages/AdminPages/Dashboard'
 import CategoryList from './pages/AdminPages/Category/CategoryList'
 import UpdateCategory from "./pages/AdminPages/Category/UpdateCategory";
-import CreateCategory from './pages/AdminPages/Category/CreateCategory'
+import CreateCategory from './pages/AdminPages/Category/CreateCategory';
+import ProductList from "./pages/AdminPages/Product/ProductList";
+import CreateProduct from "./pages/AdminPages/Product/CreateProduct";
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
         <Route path='categories' element={<CategoryList />} />
         <Route path='categories/update/:id' element={<UpdateCategory />} />
         <Route path='categories/create' element={<CreateCategory />} />
+        <Route path='products' element={<ProductList />} />
+        <Route path='products/create' element={<CreateProduct />} />
       </Route>
      </Routes>
     </div>

@@ -28,8 +28,8 @@ const AdminLayout = ({children}) => {
             { key : "2-2", label : "Kategori Ekle", onClick : () => navigate("/admin/categories/create")}
         ]},
         { key: '3', icon: <ShopOutlined />, label: 'Ürün',children : [
-            { key : "3-1", label : "Ürünleri Listele"},
-            { key : "3-2", label : "Ürün Ekle"}
+            { key : "3-1", label : "Ürünleri Listele", onClick : () => navigate("/admin/products")},
+            { key : "3-2", label : "Ürün Ekle", onClick : () => navigate("/admin/products/create")}
         ]},
         { key: '4', icon: <UserOutlined />, label: 'Kullanıcı',children : [
             { key : "4-1", label : "Kullanıcıları Listele"},
