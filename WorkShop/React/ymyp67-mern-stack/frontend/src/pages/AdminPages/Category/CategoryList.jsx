@@ -1,48 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Button, Space, Table } from 'antd'
 import { useNavigate } from 'react-router-dom';
+import { CategoryContext } from '../../../contexts/CategoryProvider';
 
 const CategoryList = () => {
-    const [categoryData,setCategoryData] = useState([]);
+    const {deleteCategory,categories} = useContext(CategoryContext);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        getCategories();
-    },[])
-
-    const getCategories = async() => {
-        try {
-            const response = await fetch("http://localhost:5000/api/categories");
-            if(response.ok){
-                const data = await response.json();
-                //console.log(data)
-                setCategoryData(data);
-            }else{
-                console.log("Kategori getirilirken hata oluştu...");
-            }
-
-        } catch (error) {
-            console.log("Sunucu hatası : ",error);
-        }
-    }
-    const deleteCategory = async(categoryId) => {
-        try {
-            const response = await fetch("http://localhost:5000/api/categories",{
-                method : "DELETE",
-                headers : {
-                    "content-type" : "application/json"
-                },
-                body : JSON.stringify({_id:categoryId})
-            });
-            if(response.ok){
-                getCategories();
-            }else{
-                console.log("Kategori silinirken hata oluştu...");
-            }
-        } catch (error) {
-            console.log("Sunucu hatası : ",error);
-        }
-    }
+       
     const columns = [
         {
             title : "Görsel",
@@ -76,7 +41,7 @@ const CategoryList = () => {
         <h2>Kategoriler</h2>
         <Table 
         columns={columns} 
-        dataSource={categoryData} 
+        dataSource={categories} 
         rowKey={(record) => record._id} 
         pagination={{ pageSize: 10 }}
         scroll={{ y: 600 }}/>

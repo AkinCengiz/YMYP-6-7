@@ -4,13 +4,16 @@ import { BrowserRouter } from "react-router-dom"
 import App from './App.jsx'
 import AdminLayout from './layouts/AdminLayout.jsx'
 import './index.css'
+import { CategoryProvider } from './contexts/CategoryProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <StrictMode>    
     <BrowserRouter>
-    <AdminLayout>
-      <App />
-    </AdminLayout>
-    </BrowserRouter>
+      <CategoryProvider>
+        <AdminLayout>
+          <App />
+        </AdminLayout>
+      </CategoryProvider>
+    </BrowserRouter>    
   </StrictMode>,
 )

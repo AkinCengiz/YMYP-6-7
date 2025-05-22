@@ -1,33 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Form, Input } from 'antd'
-import { useNavigate } from 'react-router-dom';
+import { CategoryContext } from '../../../contexts/CategoryProvider';
+
 
 const CreateCategory = () => {
 
+  const {createCategory} = useContext(CategoryContext);
   const [form] = Form.useForm();
-  const navigate = useNavigate();
+  
 
-  const handleCreateCategory = async(values) => {
-    try {
-      const response = await fetch("http://localhost:5000/api/categories",{
-        method : "POST",
-        headers : {
-          "content-type" : "application/json"
-        },
-        body : JSON.stringify(values)
-      });
-      if(response.ok){
-        navigate("/admin/categories");
-      }else{
-        console.log("Kategori eklerken problem oluştu...");
-      }
-    } catch (error) {
-      console.log("Sunucu hatası : ",error)
-    }
-  }
-
+  
   return (
-    <Form layout="vertical" form={form} initialValues={{layout : "vertical"}} onFinish={handleCreateCategory}>
+    <Form layout="vertical" form={form} initialValues={{layout : "vertical"}} onFinish={createCategory}>
       <Form.Item label="Kategori Adı" name="name">
         <Input placeholder='Kategori adı...'/>
       </Form.Item>
