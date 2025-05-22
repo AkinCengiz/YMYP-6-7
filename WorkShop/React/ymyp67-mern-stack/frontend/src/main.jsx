@@ -5,14 +5,17 @@ import App from './App.jsx'
 import AdminLayout from './layouts/AdminLayout.jsx'
 import './index.css'
 import { CategoryProvider } from './contexts/CategoryProvider.jsx'
+import { ProductProvider } from './contexts/ProductProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>    
     <BrowserRouter>
       <CategoryProvider>
-        <AdminLayout>
-          <App />
-        </AdminLayout>
+        <ProductProvider>
+          <AdminLayout>
+            <App />
+          </AdminLayout>
+        </ProductProvider>
       </CategoryProvider>
     </BrowserRouter>    
   </StrictMode>,

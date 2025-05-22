@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { Button, Space, Table } from 'antd'
+import { ProductContext } from '../../../contexts/ProductProvider'
 
 const ProductList = () => {
 
-    const [dataSource, setDataSource] = useState([]);
+    const {products,deleteProduct} = useContext(ProductContext);
 
-    const getProducts = async() => {
-        try {
-            const response = await fetch("http://localhost:5000/api/products");
-            if(response.ok){
-                const data = await response.json();
-                console.log(data)
-                setDataSource(data);
-            }else{
-                console.log("Ürünler getirilemedi...");
-            }
-        } catch (error) {
-            console.log(error)
-        }
-    }
 
-    useEffect(() => {
-        getProducts();
-    },[]);
+
 
     const columns = [
         {
@@ -80,7 +65,7 @@ const ProductList = () => {
             render : (_,record) => (
                 <Space size="middle">
                     <Button color='cyan' variant="solid" onClick={() => {record}}>Güncelle</Button>
-                    <Button color='danger' variant="solid" onClick={() => {}}>Sil</Button>
+                    <Button color='danger' variant="solid" onClick={() => deleteProduct(record._id)}>Sil</Button>
                 </Space>
             )
         }
@@ -91,7 +76,7 @@ const ProductList = () => {
         <h2>Ürünler</h2>
         <Table 
         columns={columns} 
-        dataSource={dataSource} 
+        dataSource={products} 
         rowKey={(record) => record._id} 
         pagination={{ pageSize: 10 }}
         scroll={{ y: 600 }}/>
