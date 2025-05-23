@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import { Button, Space, Table } from 'antd'
 import { ProductContext } from '../../../contexts/ProductProvider'
+import { useNavigate } from 'react-router-dom';
 
 const ProductList = () => {
 
     const {products,deleteProduct} = useContext(ProductContext);
+    const navigate = useNavigate();
+    
 
 
 
@@ -64,7 +67,7 @@ const ProductList = () => {
             key : "action",
             render : (_,record) => (
                 <Space size="middle">
-                    <Button color='cyan' variant="solid" onClick={() => {record}}>Güncelle</Button>
+                    <Button color='cyan' variant="solid" onClick={() => navigate(`/admin/products/update/${record._id}`)}>Güncelle</Button>
                     <Button color='danger' variant="solid" onClick={() => deleteProduct(record._id)}>Sil</Button>
                 </Space>
             )

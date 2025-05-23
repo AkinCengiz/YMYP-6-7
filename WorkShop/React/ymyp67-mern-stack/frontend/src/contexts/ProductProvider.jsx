@@ -1,9 +1,11 @@
 import React, { createContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const ProductContext = createContext();
 
 const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     const getProducts = async() => {
         try {
@@ -60,15 +62,55 @@ const ProductProvider = ({children}) => {
         }
     }
 
+    const createProduct = async(values) => {
+        try {
+            const response = await fetch("http://localhost:5000/api/products",{
+                method : "POST",
+                headers : {
+                    "content-type":"application/json"
+                },
+                body : JSON.stringify(values)
+            });
+            if(response.ok){
+                navigate("/admin/products")
+            }else{
+                console.log("Ürün ekleme işlemi başarısız...");
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const updateProduct = async(values) => {
+        try {
+            const response = await fetch(`http://localhost:5000/api/products/${values._id}`,{
+                method : "PUT",
+                headers : {
+                    "content-type" : "application/json"
+                },
+                body : JSON.stringify(values)
+            });
+            if(response.ok){
+                navigate("/admin/products");
+            }else{
+                console.log("Ürün güncellenirken hata oluştu...");
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
         getProducts();
-    },[])
+    },[navigate])
 
     const values = {
         products,
         getProducts,
         deleteProduct,
-        getByIdProduct
+        getByIdProduct,
+        createProduct,
+        updateProduct
     }
 
   return (

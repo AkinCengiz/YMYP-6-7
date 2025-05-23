@@ -1,21 +1,31 @@
+import React, { useContext, useEffect } from 'react'
 import { Button, Checkbox, Form, Input, Select } from 'antd'
-import React, { useContext } from 'react'
 import { CategoryContext } from '../../../contexts/CategoryProvider';
 import { ProductContext } from '../../../contexts/ProductProvider';
+import { useParams } from 'react-router-dom';
 
 const { TextArea } = Input;
 
-const CreateProduct = () => {
-    const {categories} = useContext(CategoryContext);
-    const {createProduct} = useContext(ProductContext);
-    const [form] = Form.useForm();
-    
+const UpdateProduct = () => {
 
-    const colors = ["Black","White","Grey","Red","Green","Brown","Blue","Orange","Yellow"];
+  const {categories} = useContext(CategoryContext)
+  const {updateProduct, getByIdProduct} = useContext(ProductContext);
+  const params = useParams();
+  const productId = params.id;
+  const [form] = Form.useForm();
+
+  useEffect(() => {
+    getByIdProduct(productId,form);
+  },[productId])
+
+  const colors = ["Black","White","Grey","Red","Green","Brown","Blue","Orange","Yellow"];
   return (
     <div>
-        <h2 style={{marginBottom : "10px"}}>Ürün Ekle</h2>
-        <Form form={form} layout='vertical' onFinish={createProduct} initialValues={{colors:["Black","White","Red"]}} >
+        <h2 style={{marginBottom : "10px"}}>Ürün Güncelle</h2>
+        <Form form={form} layout='vertical' onFinish={updateProduct} initialValues={{colors:["Black","White","Red"]}} >
+            <Form.Item label="Ürün ID" name="_id" style={{display:"none"}}>
+              <Input />
+            </Form.Item>
             <Form.Item label="Ürün Adı" name="name" rules={[{required : true, message : "Lütfen ürün adı giriniz..."}]}>
                 <Input placeholder='Ürün adı giriniz...' />
             </Form.Item>
@@ -46,11 +56,11 @@ const CreateProduct = () => {
                 </Select>
             </Form.Item>
             <Form.Item>
-                <Button type='primary' htmlType='submit'>Ürün Ekle</Button>
+                <Button type='primary' htmlType='submit'>Ürün Güncelle</Button>
             </Form.Item>
         </Form>
     </div>
   )
 }
 
-export default CreateProduct
+export default UpdateProduct

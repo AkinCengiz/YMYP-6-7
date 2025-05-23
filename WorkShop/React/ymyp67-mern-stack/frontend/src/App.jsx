@@ -7,6 +7,9 @@ import UpdateCategory from "./pages/AdminPages/Category/UpdateCategory";
 import CreateCategory from './pages/AdminPages/Category/CreateCategory';
 import ProductList from "./pages/AdminPages/Product/ProductList";
 import CreateProduct from "./pages/AdminPages/Product/CreateProduct";
+import UpdateProduct from './pages/AdminPages/Product/UpdateProduct'
+import AuthorsPage from './pages/AuthorsPage'
+import ProductsPage from './pages/ProductsPage'
 
 function App() {
 
@@ -14,6 +17,8 @@ function App() {
     <div className='app'>
      <Routes>
       <Route path='/' element={<HomePage />} />
+      <Route path='/authors' element={<AuthorsPage />} />
+      <Route path='/products' element={<ProductsPage />} />
       <Route path='/admin/'>
         <Route index element={<Dashboard />} />
         <Route path='categories' element={<CategoryList />} />
@@ -21,6 +26,7 @@ function App() {
         <Route path='categories/create' element={<CreateCategory />} />
         <Route path='products' element={<ProductList />} />
         <Route path='products/create' element={<CreateProduct />} />
+        <Route path='products/update/:id' element={<UpdateProduct />} />
       </Route>
      </Routes>
     </div>
